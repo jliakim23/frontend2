@@ -1,8 +1,8 @@
-import Post from "../components/Journal";
+import Journal from "../components/Journal";
 import { useLoaderData, Form } from "react-router-dom";
 
 const Index = () => {
-  const journal = useLoaderData();
+  const journalEntrys = useLoaderData();
   const moodChoices = [
     'Happy', 'Excited', 'Sad', 'Angry', 'Irritated', 'Anxious', 'Stressed'
   ];
@@ -11,7 +11,7 @@ const Index = () => {
       <div style={{ textAlign: "center" }}>
         <h2>Create Mood Entry</h2>
         <Form action="/create" method="post">
-          <input type="text" name="activity" placeholder="What did you do today?"/>
+          <input type="text" name="activities" placeholder="What did you do today?"/>
           <select name="mood" id="mood">
         {moodChoices.map((mood, index) => (
             <option key={index} value={mood}>{mood}</option>
@@ -22,8 +22,8 @@ const Index = () => {
           <button>Create New Entry</button>
         </Form>
       </div>
-      {journal.map((post) => (
-        <Post post={post} key={post.id} />
+      {journalEntrys.map((post) => (
+        <Journal post={post} key={post.id} />
       ))}
     </>
   );

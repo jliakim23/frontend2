@@ -14,9 +14,9 @@ const Post = ({ post }) => {
   return (
     <div style={div}>
       <Link to={`/journal/${post.id}`}>
-        <h1>{post.activities}</h1>
-      </Link>
-      <h2>{post.mood}</h2>
+        <h1>{post.activities}</h1>  </Link>
+        <h2>{post.mood}</h2>
+      
       <h2>{post.date}</h2>
     </div>
   );

@@ -22,7 +22,7 @@ const EntryDetails = () => {
         <Form action={`/update/${journalEntry.id}`} method="post">
           <input
             type="text"
-            name="activity"
+            name="activities"
             placeholder="What did you do today?"
             defaultValue={journalEntry.activities}
           />
@@ -45,7 +45,7 @@ const EntryDetails = () => {
           />
           <button>Update Entry</button>
         </Form>
-        <Form action={`/delete/${journalEntry.id}`} method="post">
+        <Form action={`/delete/${journalEntry.id}`} method="delete">
           <button>Delete</button>
         </Form>
       </div>

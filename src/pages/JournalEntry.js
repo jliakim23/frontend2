@@ -19,7 +19,6 @@ const Show = () => {
 
   return (
     <div style={div}>
-      {/* <h1>{journalEntry.}</h1> */}
       <h2>Mood: {journalEntry.mood}</h2>
       <h2>Activities: {journalEntry.activities}</h2>
       <h2>Date: {journalEntry.date}</h2>

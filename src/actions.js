@@ -38,7 +38,7 @@ export const updateAction = async ({request, params}) => {
     };
 
 
-    const updateURL = `${URL}/planner/${id}/`; 
+    const updateURL = `${URL}/journal/${id}/`; 
     await fetch(updateURL, {
       method: "put",
         headers: {
